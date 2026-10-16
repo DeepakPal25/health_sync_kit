@@ -1,0 +1,37 @@
+name: health_sync_kit
+description: >-
+  HealthKit + Health Connect for Flutter with a built-in analytics layer:
+  typed health data, de-duplicated daily stats, incremental sync, sleep score,
+  readiness, streaks, anomalies and training load. Mock source for tests.
+version: 0.1.0
+homepage: https://github.com/DeepakPal25/health_sync_kit
+repository: https://github.com/DeepakPal25/health_sync_kit
+issue_tracker: https://github.com/DeepakPal25/health_sync_kit/issues
+topics:
+  - health
+  - healthkit
+  - health-connect
+  - fitness
+  - analytics
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.deepakpal.health_sync_kit
+        pluginClass: HealthSyncKitPlugin
+      ios:
+        pluginClass: HealthSyncKitPlugin
