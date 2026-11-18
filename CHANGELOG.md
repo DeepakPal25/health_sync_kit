@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 - 2026-11-18
+
+- Shorter package description, within pub.dev's 180-character limit.
+- Example: the iOS write usage string (`NSHealthUpdateUsageDescription`) no longer claims the app saves water; the example only reads health data.
+
 ## 0.1.0 - 2026-11-18
 
 Initial release: a Flutter port of [HealthSyncKit](https://github.com/DeepakPal25/HealthSyncKit).

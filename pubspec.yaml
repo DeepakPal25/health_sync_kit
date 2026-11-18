@@ -3,7 +3,7 @@ description: >-
   HealthKit and Health Connect for Flutter with built-in analytics:
   de-duplicated daily stats, incremental sync, sleep score, readiness,
   streaks and training load.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/DeepakPal25/health_sync_kit
 repository: https://github.com/DeepakPal25/health_sync_kit
 issue_tracker: https://github.com/DeepakPal25/health_sync_kit/issues
