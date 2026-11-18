@@ -29,7 +29,7 @@
 	<key>NSHealthShareUsageDescription</key>
 	<string>health_sync_kit demo reads your activity, heart, body and sleep data to show summaries on this device. Nothing leaves the device.</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>health_sync_kit demo can save water intake you log to Apple Health.</string>
+	<string>health_sync_kit demo only reads from Apple Health and does not write any data.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
