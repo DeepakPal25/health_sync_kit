@@ -19,6 +19,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: 3.38.5
           cache: true
       - run: flutter pub get
       - run: flutter analyze --no-fatal-infos
@@ -38,6 +39,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: 3.38.5
           cache: true
       - name: Generate platform folders
         working-directory: example
@@ -58,6 +60,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: 3.38.5
           cache: true
       - name: Generate platform folders
         working-directory: example
