@@ -36,6 +36,9 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
+      # Cache Gradle deps so we don't re-download from Maven Central every
+      # run (shared runner IPs get HTTP 429 rate-limited there).
+      - uses: gradle/actions/setup-gradle@v4
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
@@ -49,7 +52,14 @@ jobs:
         run: sed -i -E 's/minSdk(Version)? *=? *flutter\.minSdkVersion/minSdk = 26/' android/app/build.gradle*
       - name: Build APK
         working-directory: example
-        run: flutter build apk --debug
+        # Retry with backoff: transient 429s from Maven Central are common.
+        run: |
+          for attempt in 1 2 3; do
+            flutter build apk --debug && exit 0
+            echo "Build failed (attempt $attempt), retrying in $((attempt * 60))s..."
+            sleep $((attempt * 60))
+          done
+          exit 1
 
   ios:
     name: Build example (iOS)
