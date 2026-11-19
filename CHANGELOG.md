@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 - 2026-11-19
+
+- CI: cache Gradle dependencies and retry the Android example build on transient Maven Central rate limits (HTTP 429). No changes to the package API or behavior.
+
 ## 0.1.1 - 2026-11-18
 
 - Shorter package description, within pub.dev's 180-character limit.

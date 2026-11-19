@@ -48,7 +48,7 @@ print('${night?.summary.sleepScore} sleep · ${ready.score} ${ready.label} · $s
 
 ```yaml
 dependencies:
-  health_sync_kit: ^0.1.1
+  health_sync_kit: ^0.1.2
 ```
 
 ### iOS (HealthKit)
